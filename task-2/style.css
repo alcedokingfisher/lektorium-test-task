@@ -1,0 +1,249 @@
+/* Basic Setup */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #586aca;
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 32px 0 24px 0;
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+a {
+  color: #586aca;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 45px;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 2px solid rgba(88, 105, 202, 0.5);
+}
+
+input:-webkit-autofill
+{
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  box-shadow: 0 0 0 30px white inset;
+}
+
+input:-webkit-autofill::first-line {
+  font-size: 16px;
+}
+
+/* Page Setup */
+
+.registration-form-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.registration-form-wrapper {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  padding: 24px 48px;
+  width: 450px;
+}
+
+.registration-form > p:first-of-type {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.email-wrapper,
+.password-wrapper {
+  display: block;
+  margin-top: 8px;
+}
+
+.password-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styling Cross-browser Checkbox */
+
+.checkbox-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-container  input[type="checkbox"] + span {
+  margin-left: 14px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+}
+
+.checkbox-container input[type="checkbox"] + span::before,
+.checkbox-container input[type="checkbox"] + span::after {
+  content: "";
+  display: inline-block;
+  left: 4px;
+  position: absolute;
+  top: 0;
+}
+
+.checkbox-container input[type="checkbox"] + span::before {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  height: 11px;
+  transition: all .25s ease;
+  width: 11px;
+}
+
+.checkbox-container input[type="checkbox"]:checked + span::before  {
+  background-color: #586aca;
+  border-color: #586aca;
+}
+
+.checkbox-container input[type="checkbox"]:checked + span::after  {
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  height: 3px;
+  transform: rotate(-45deg) translate(-1px, 4px);
+  width: 7px;
+}
+
+.checkbox-container:hover input[type="checkbox"] + span::before {
+  border-color: #4f4f4f;
+}
+
+.checkbox-container:hover input[type="checkbox"]:checked + span::before {
+  background-color: #3d51c2;
+}
+
+.submit {
+  background-color: #586aca;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  transition: background-color .25s ease ;
+}
+
+.submit:hover {
+  background-color: #3d51c2;
+}
+
+.submit:active {
+  background-color: #3749ae;
+}
+
+.registration-form > p:last-of-type {
+  color: #586aca;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.registration-form-section > p {
+  color: rgba(26, 26, 26, 0.85);
+  text-align: center;
+}
+
+.registration-form-section > p > a {
+  color: rgba(88, 105, 202, 0.95);
+  margin-left: 4px;
+}
+
+/* Styling Errors */
+
+.error {
+  border: 2px solid rgba(200, 0, 0, 0.5) !important;
+}
+
+span.error {
+  border: none !important;
+}
+
+span.error::after {
+  color: rgb(200, 0, 0);
+  content: "Please enter a valid data";
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+/* Media Query */
+
+@media (max-width: 576px) {
+  html, body {
+    min-width: 320px;
+  }
+
+  h1 {
+    font-size: 1.75em;
+    margin-bottom: 0;
+  }
+
+  .registration-form-section {
+    display: block;
+    margin: 48px 0;
+  }
+
+  .registration-form-wrapper {
+    box-shadow: none;
+    padding: 24px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .registration-form > p:first-of-type {
+    font-size: 19px;
+    margin-top: 0;
+  }
+
+  .registration-form > p:nth-of-type(2) {
+    text-align: left;
+  }
+
+  .registration-form > p:last-of-type {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}

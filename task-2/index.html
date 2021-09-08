@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test Task 2: Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="registration-form-section">
+    <h1>Stackfindover</h1>
+
+    <div class="registration-form-wrapper">
+        <form action="#" method="post" class="registration-form" name="registrationForm" novalidate="novalidate" onsubmit="return validateForm()">
+            <p>Sign in to your account</p>
+            <p>
+                <label for="email">Email</label>
+                <br>
+                <span class="email-wrapper">
+                    <input type="email" name="email" id="email">
+                </span>
+            </p>
+            <p>
+                <span class="password-content-container">
+                    <label for="password">Password</label>
+                    <a href="https://www.google.com/">Forgot your password?</a>
+                </span>
+                <span class="password-wrapper" title="Password must be at least 6 characters long">
+                    <input type="password" name="password" id="password">
+                </span>
+            </p>
+            <p>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="stay-signed" value="for a week">
+                    <span>Stay signed in for a week</span>
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Continue" class="submit">
+            </p>
+
+            <p>
+                <a href="https://www.google.com/maps/">Use single sign-on (Google) instead</a>
+            </p>
+        </form>
+    </div>
+
+    <p>Don't have an account?<a href="https://uk-ua.facebook.com/">Sign up</a></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
